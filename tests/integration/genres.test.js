@@ -9,7 +9,7 @@ describe('/api/genres', () => {
   beforeEach(() => { server = require('../../index'); }); // this is called before each test
   afterEach(async () => {
     await Genre.remove({});
-    server.close(); // always close the server after each test to avoid errors
+    await server.close(); // always close the server after each test to avoid errors
   }); // this is called after each test even if there is an error
 
   describe('GET /', () => {
